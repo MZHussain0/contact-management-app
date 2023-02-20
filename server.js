@@ -10,6 +10,7 @@ const port = process.env.PORT || 3900;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use("/api/contacts", require("./routes/contactRoutes"));
+app.use("/api/users", require("./routes/userRoutes"));
 app.use(errorHandler);
 
 app.listen(port, () => console.log("listening on port " + process.env.PORT));
